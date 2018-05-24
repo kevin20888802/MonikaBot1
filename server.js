@@ -28,15 +28,15 @@ client.on("ready", () => {
   .then(connection => console.log('Connected'))
   .catch(console.error);
   
-  	var rule = new schedule.RecurrenceRule();
-	rule.minute = 0;
-	rule.hour = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
-	var everyhrjob = schedule.scheduleJob(rule, function () {
-			var dt = dateTime.create();
-			var formatteddt = dt.format('Y-m-d H:M:S');
-			console.log(formatteddt);
-			tchannel.sendMessage('現在時間：' + formatteddt);
-		})
+  //	var rule = new schedule.RecurrenceRule();
+//	rule.minute = 0;
+//	rule.hour = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
+	//var everyhrjob = schedule.scheduleJob(rule, function () {
+	//		var dt = dateTime.create();
+	//		var formatteddt = dt.format('Y-m-d H:M:S');
+	//		console.log(formatteddt);
+		//	tchannel.sendMessage('現在時間：' + formatteddt);
+	//	})
    client.user.setPresence({ game: { name: 'Doki Doki Literature Club', type: 0 } });;
 });
 
